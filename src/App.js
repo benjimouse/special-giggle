@@ -28,7 +28,6 @@ class App extends Component {
       <div class="container">
         <div class="row">
           <Dog dog={this.state.dog} />
-
           <Quote quote={this.state.quote} />
         </div>
     </div>

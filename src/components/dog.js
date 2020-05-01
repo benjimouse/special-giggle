@@ -1,12 +1,23 @@
 import React from 'react'
+import Link from '../components/link'
 
 const Dog = ({ dog }) => {
   return (
-    <div class="col-md-auto">
-      <h1>Random Dog!</h1>
-      <img src={dog.message} alt="test" />
-      <p>Source is <a href="https://dog.ceo/dog-api/" >https://dog.ceo/dog-api/</a></p>
-    </div>
+    <div class="col">
+<div class="card">
+  <div class="card-header">
+  Random dog!
+  </div>
+  <div class="card-body">
+  <img  src={dog.message}  alt="Random dog!" />
+      <Link text="api used" url="https://github.com/skolakoda/programming-quotes-api" />
+    
+  </div>
+</div>
+</div>
+
+
+
   )
 };
 

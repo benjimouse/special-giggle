@@ -1,13 +1,23 @@
 import React from 'react'
+import Link from '../components/link'
 
 const Quote = ({ quote }) => {
   return (
     <div class="col">
-      <h1>Random Programing quote!</h1>
-      <p><q>{quote.en}</q></p>
-      <p> - {quote.author}</p>
-      <p>Source is <a href="https://github.com/skolakoda/programming-quotes-api" >https://github.com/skolakoda/programming-quotes-api</a></p>
-    </div>
+<div class="card">
+  <div class="card-header">
+  Programming quote
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{quote.en}</p>
+      <footer class="blockquote-footer">A quote from: <cite title="Source Title">{quote.author}</cite></footer>
+      <Link text="api used" url="https://github.com/skolakoda/programming-quotes-api" />
+    </blockquote>
+  </div>
+</div>
+</div>
+
   )
 };
 
