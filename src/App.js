@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Dog from './components/dog';
 import Quote from './components/quote';
+import Ribbon from './components/ribbon';
 
 class App extends Component {
   state = {
@@ -23,9 +24,15 @@ class App extends Component {
   }
   render() {
     return (<>
-      <Dog dog={this.state.dog} />
-      <Quote quote={this.state.quote} />
-      </>
+      <Ribbon repo="https://github.com/benjimouse/special-giggle" />
+      <div class="container">
+        <div class="row">
+          <Dog dog={this.state.dog} />
+
+          <Quote quote={this.state.quote} />
+        </div>
+    </div>
+  </>
     )
   }
 }
