@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
-import Contacts from './components/contacts';
+import Dog from './components/dog';
 
 class App extends Component {
   state = {
-    contacts: []
+    dog: []
   }
   componentDidMount() {
-    fetch('http://jsonplaceholder.typicode.com/users')
+    fetch('https://dog.ceo/api/breeds/image/random')
     .then(res => res.json())
     .then((data) => {
-      this.setState({ contacts: data })
+      this.setState({ dog: data })
     })
     .catch(console.log)
   }
   render() {
     return (
-      <Contacts contacts={this.state.contacts} />
+      <Dog dog={this.state.dog} />
     )
   }
 }
