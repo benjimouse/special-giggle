@@ -9,12 +9,18 @@ class App extends Component {
     quote: []
   }
   componentDidMount() {
+    this.getDog()
+    this.getQuote()
+  }
+  getDog() {
     fetch('https://dog.ceo/api/breeds/image/random')
     .then(res => res.json())
     .then((data) => {
       this.setState({ dog: data })
     })
     .catch(console.log)
+  }
+  getQuote() {
     fetch('https://programming-quotes-api.herokuapp.com/quotes/random')
     .then(res => res.json())
     .then((data) => {
@@ -27,6 +33,9 @@ class App extends Component {
       <Ribbon repo="https://github.com/benjimouse/special-giggle" />
       <div class="container">
         <div class="row">
+          <div class="col" ><h1>A fun little page.</h1></div>
+        </div>
+        <div class="row" >
           <Dog dog={this.state.dog} />
           <Quote quote={this.state.quote} />
         </div>
